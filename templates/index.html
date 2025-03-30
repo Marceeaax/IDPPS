@@ -75,7 +75,15 @@
                 <a class="nav-item nav-link" href="/help">Ayuda</a>
                 <a class="nav-item nav-link" href="/contact">Contacto</a>
             </div>
-        </div>
+            <div class="navbar-nav ml-auto">
+                {% if username %}
+                    <span class="nav-item nav-link">Hola, {{ username }}</span>
+                    <a class="nav-item nav-link" href="/logout">Cerrar sesión</a>
+                {% else %}
+                    <a class="nav-item nav-link" href="/login">Iniciar sesión</a>
+                {% endif %}
+            </div>
+        </div>        
     </nav>
     <div class="container-fluid">
         <div class="row">
